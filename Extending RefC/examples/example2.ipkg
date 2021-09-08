@@ -1,0 +1,8 @@
+package example2
+
+depends = python
+
+modules = Example1, Example2
+
+main = Example2
+executable = example2
