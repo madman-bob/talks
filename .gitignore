@@ -1,3 +1,7 @@
-**/image-*.dot
-**/image-*.png
-**.pdf
+image-*.dot
+image-*.png
+*.pdf
+
+build/
+.ipynb_checkpoints/
+*.ods

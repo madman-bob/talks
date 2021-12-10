@@ -1,0 +1,5 @@
+package my-package
+
+depends = contrib, python, jupyter, idris2-jupyter-vega, xml, odf
+
+modules = MyModule
