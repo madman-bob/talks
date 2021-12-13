@@ -11,33 +11,21 @@ myBarChart : String -> Vect n String -> Vect n Double -> VegaLite
 myBarChart description names xs =
     let vals = toList $ zip names xs in
     TopLevelSpec_0 $ MkTopLevelUnitSpec
-        (Just "https://vega.github.io/schema/vega-lite/v5.json")
-        Nothing Nothing Nothing Nothing Nothing Nothing
-        (Data_0 $ Data_0 $ DataSource_1 $ MkInlineData Nothing Nothing $ InlineDataset_3 $ map (\(name, x) => JObject [("a", JString name), ("b", JNumber x)]) vals)
-        Nothing
-        (Just description)
-        (Just $ MkFacetedEncoding
-            Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing
-            (Just $ PositionDef_0 $ MkPositionFieldDef
-                Nothing
-                (Just $ Axis_0 $ MkAxis Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing (Just $ LabelAngle_0 0) Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing)
-                Nothing Nothing
-                (Just $ Field_0 "a")
-                Nothing Nothing Nothing Nothing Nothing Nothing
-                (Just StandardTypeNominal)
-            )
-            Nothing Nothing Nothing
-            (Just $ PositionDef_0 $ MkPositionFieldDef
-                Nothing Nothing Nothing Nothing
-                (Just $ Field_0 "b")
-                Nothing Nothing Nothing Nothing Nothing Nothing
-                (Just StandardTypeQuantitative)
-            )
-            Nothing Nothing Nothing
-        )
-        Nothing
+        {Schema = Just "https://vega.github.io/schema/vega-lite/v5.json"}
+        (Data_0 $ Data_0 $ DataSource_1 $ MkInlineData $ InlineDataset_3 $ map (\(name, x) => JObject [("a", JString name), ("b", JNumber x)]) vals)
+        {description = Just description}
+        {encoding = Just $ MkFacetedEncoding
+            {x = Just $ PositionDef_0 $ MkPositionFieldDef
+                {axis = Just $ Axis_0 $ MkAxis {labelAngle = Just $ LabelAngle_0 0}}
+                {field = Just $ Field_0 "a"}
+                {type = Just StandardTypeNominal}
+            }
+            {y = Just $ PositionDef_0 $ MkPositionFieldDef
+                {field = Just $ Field_0 "b"}
+                {type = Just StandardTypeQuantitative}
+            }
+        }
         (AnyMark_2 MarkBar)
-        Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing
 
 export
 parseSomeData : HasIO io => (fileName : String) -> io (Maybe $ List (String, Double))
