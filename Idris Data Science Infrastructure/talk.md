@@ -24,6 +24,7 @@ links:
     url: https://github.com/madman-bob/idris2-xml
   - title: LibreOffice file manipulation library
     url: https://github.com/madman-bob/idris2-odf
+date-meta: 2021-12-07
 header-includes:
   - \addtobeamertemplate{navigation symbols}{}{\usebeamerfont{footline} \usebeamercolor[fg]{footline} \insertframenumber}
 ---

@@ -41,6 +41,7 @@ links:
 pandoc-latex-fontsize:
   - classes: [idris]
     size: scriptsize
+date-meta: 2022-09-11
 header-includes:
   - \addtobeamertemplate{navigation symbols}{}{\usebeamerfont{footline} \usebeamercolor[fg]{footline} \insertframenumber}
 ---

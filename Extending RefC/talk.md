@@ -18,6 +18,7 @@ links:
     url: https://github.com/madman-bob/idris2-python
   - title: Idris 2 Documentation on Extending RefC
     url: https://idris2.readthedocs.io/en/latest/backends/refc.html#extending-refc
+date-meta: 2021-09-02
 header-includes:
   - \addtobeamertemplate{navigation symbols}{}{\usebeamerfont{footline} \usebeamercolor[fg]{footline} \insertframenumber}
 fontsize: 10pt
