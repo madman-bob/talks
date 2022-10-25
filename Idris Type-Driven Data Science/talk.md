@@ -1,7 +1,10 @@
 ---
 title: Idris Type-Driven Data Science
 subtitle: Sorry Python, I'll miss you
-author: Robert Wright
+author:
+  - Robert Wright
+  - Ohad Kammar
+  - Michel Steuwer
 institute:
   - University of Edinburgh, School of Informatics
   - "Supported by: National Cyber Security Centre (NCSC)"
@@ -160,11 +163,13 @@ Later work could use the same interface, but wrapped over a more efficient repre
 
 <!--
 
-First of all, let's look at the library from an end-user's perspective.
+Let's look at the library from an end-user's perspective.
 
 - `students`
 
   - Show what tables look like
+
+  - Explain the type of the table
 
   - If you're familiar with Idris notation, you may notice we're using `SnocList` notation here.
 
@@ -172,7 +177,7 @@ First of all, let's look at the library from an end-user's perspective.
 
     We're using a `SnocList` style representation, as this representation easily allows these operations.
 
-  - `Field` overloads both `String` and `Integer` notation, to allow referring to columns either by name, or by index.
+  - We can refer to fields by either name or index.
 
   - If we use either a name, or an index, that is not available, then we get a compile-time error.
 
@@ -186,13 +191,29 @@ First of all, let's look at the library from an end-user's perspective.
 
     If we were using a custom type-system, we could provide a more descriptive error message here.
 
+    Alternatively, we could use something like Idris 1's error reflection.
+
+  - `Field` overloads both `String` and `Integer` notation, to allow this.
+
 - `DotProduct`
 
   We can constrain our column types.
 
   So here we have two columns, of the same numeric type, and we're returning a value of the same type.
 
+- `QuizScoreFilter`
+
+  - `buildColumn` adds a column to a table, changing the schema.
+
+    We do type-level computation (admittedly, not much in this example) to work out the schema of the result.
+
+  - `quizAverage` takes a "gradebook" table, and takes the average of all columns whose names start with "quiz".
+
+    So we define a custom data type, describing the constraint that all columns whose names start with "quiz" are of the desired type.
+
 - `PHacking`
+
+  Skip if short on time.
 
   We're wanting to compare all of the columns of a table with a particular column, to see whether there's a correlation between eating jellybeans of a particular colour, and getting acne.
 
@@ -203,14 +224,6 @@ First of all, let's look at the library from an end-user's perspective.
   `jellyAnon` has all columns of that type.
 
   `jellyNamed` does not, but after dropping "name", it does - and the type-system can cope with this.
-
-- `QuizScoreFilter`
-
-  Skip if short on time.
-
-  We want to take the average of all columns whose names start with "quiz".
-
-  So we define a custom data type, describing the constraint that all columns whose names start with "quiz" are of the desired type.
 
 -->
 
