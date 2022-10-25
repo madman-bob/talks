@@ -9,6 +9,15 @@ abstract: |
   Writing backends is time-consuming, and most languages have C FFIs, so wouldn't it be nice if we could just use the C backend instead? In this talk I show how to extend RefC to create Idris 2 backends for more languages, by a high-level overview of the Python backend.
 
   No Python knowledge will be required, we will be staying mostly in Idris code. This talk should be useful both if you want to get involved in the Python backend, or if you want to create another RefC-based backend.
+links:
+  - title: Idris Community Discord Recording, September 2021
+    url: https://youtu.be/i-_U6US3bBk
+  - title: RefC GitHub
+    url: https://github.com/idris-lang/Idris2/tree/main/src/Compiler/RefC
+  - title: Idris2-Python GitHub
+    url: https://github.com/madman-bob/idris2-python
+  - title: Idris 2 Documentation on Extending RefC
+    url: https://idris2.readthedocs.io/en/latest/backends/refc.html#extending-refc
 header-includes:
   - \addtobeamertemplate{navigation symbols}{}{\usebeamerfont{footline} \usebeamercolor[fg]{footline} \insertframenumber}
 fontsize: 10pt

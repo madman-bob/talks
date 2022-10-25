@@ -9,6 +9,21 @@ abstract: |
   An introduction to a number of tools supporting data science work in Idris. We will talk about tools for extracting data from businesses, presenting results to stakeholders, and other tools that were developed in the course of developing these tools.
 
   This is the surrounding work, we wont directly do any data science.
+links:
+  - title: Idris Community Discord Recording, December 2021
+    url: https://youtu.be/4jDlYJf9_34
+  - title: Idris2-Python GitHub
+    url: https://github.com/madman-bob/idris2-python
+  - title: Idris 2 Jupyter Kernel
+    url: https://github.com/madman-bob/idris2-jupyter
+  - title: Jupyter Kernel VegaLite plugin
+    url: https://github.com/madman-bob/idris2-jupyter-vega
+  - title: JSON Schema to Idris types
+    url: https://github.com/madman-bob/idris2-json-schema
+  - title: XML library
+    url: https://github.com/madman-bob/idris2-xml
+  - title: LibreOffice file manipulation library
+    url: https://github.com/madman-bob/idris2-odf
 header-includes:
   - \addtobeamertemplate{navigation symbols}{}{\usebeamerfont{footline} \usebeamercolor[fg]{footline} \insertframenumber}
 ---

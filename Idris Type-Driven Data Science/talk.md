@@ -31,6 +31,13 @@ references:
     title: "Types for Tables: A Language Design Benchmark"
     container-title: The Art, Science, and Engineering of Programming
     volume: 6
+links:
+  - title: TyDe September 2022 Recording
+    url: https://youtu.be/YZ7awuwdN2Q
+  - title: SPLS March 2022 Recording
+    url: https://youtu.be/YfWdHQ4DpQg?t=9069
+  - title: Idris2-Table GitHub
+    url: https://github.com/madman-bob/idris2-table
 pandoc-latex-fontsize:
   - classes: [idris]
     size: scriptsize
