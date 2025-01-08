@@ -4,6 +4,16 @@ author:
   - \underline{Robert Wright}
   - Ohad Kammar
 institute: The University of Edinburgh
+abstract: |
+  We present a library for the ergonomic creation, manipulation, and use of first-order algebras. We do not rely on hard-coded syntactic support for our embedded language. Instead, we use metaprogramming to provide syntactic sugar for creating and using user-definable deeply-embedded first-order algebras.
+
+  We manipulate Idris 2 syntax with elaborator reflection at compile-time. We reinterpret the syntax with non-standard semantics, to provide utilities for creating, and writing terms in, user-defined algebras. We show how to use this to evaluate in an algebra internally to a category.
+links:
+  - title: TyDe September 2024 Recording
+    url: https://www.youtube.com/watch?v=XMq17Kl4i2E
+  - title: Algebraic manipulation library GitHub
+    url: https://github.com/madman-bob/semantic-reflection
+date-meta: 2024-09-06
 idris2-packages:
   - semantic-reflection
 colorlinks: true
